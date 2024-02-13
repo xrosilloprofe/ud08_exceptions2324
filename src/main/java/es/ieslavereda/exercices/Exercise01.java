@@ -1,13 +1,12 @@
-package es.ieslavereda;
+package es.ieslavereda.exercices;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Example05 {
+public class Exercise01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int div,x,y;
-        int[] vector = {0,1,2};
 
         try{
             System.out.print("Introduce el numerador: ");
@@ -16,15 +15,6 @@ public class Example05 {
             y = scanner.nextInt();
             div = x / y;
             System.out.println("Resultado: " + div);
-
-            //pedir consultar un elemento del vector
-            //capturar la excepción si está fuera de rango
-            System.out.print("Introduce la posición en el vector: ");
-            int posicion = scanner.nextInt();
-            System.out.println("Elemento es: " + vector[posicion]);
-
-        } catch (ArrayIndexOutOfBoundsException e){
-            System.err.println("Acceso incorrecto al array: " + e);
         } catch (ArithmeticException e){
             System.err.println("Error producido: " + e);
         } catch (InputMismatchException e){
@@ -35,6 +25,5 @@ public class Example05 {
         } finally {
             System.out.println("FIN");
         }
-
     }
 }
