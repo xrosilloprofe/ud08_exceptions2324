@@ -1,6 +1,8 @@
 package es.ieslavereda.exercices;
 
-public class Gato {
+import java.io.Serializable;
+
+public class Gato  implements Serializable {
     private String nombre;
     private int edad;
 
